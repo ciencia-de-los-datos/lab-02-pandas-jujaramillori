@@ -104,7 +104,7 @@ def pregunta_06():
     ['A', 'B', 'C', 'D', 'E', 'F', 'G']
 
     """
-    return tbl1["_c4"].drop_duplicates().str.upper().sort_values().values
+    return list(tbl1["_c4"].drop_duplicates().str.upper().sort_values().values)
 
 # print(pregunta_06())
 
@@ -205,7 +205,7 @@ def pregunta_11():
     38   38      d,e
     39   39    a,d,f
     """
-    table=tbl1.groupby("_c0")["_c4"].apply(lambda x: ",".join(sorted(x)))
+    table=tbl1.groupby("_c0")["_c4"].apply(lambda x: ",".join(sorted(x.astype(str)))).reset_index()
     table.columns=["_c0","_c4"]
     table=pd.DataFrame(table)
     return table
