@@ -213,6 +213,7 @@ def pregunta_11():
 # print(pregunta_11())
 
 
+
 def pregunta_12():
     """
     Construya una tabla que contenga _c0 y una lista separada por ',' de los valores de
