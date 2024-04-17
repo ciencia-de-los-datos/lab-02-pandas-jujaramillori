@@ -64,7 +64,7 @@ jobs:
       uses: education/autograding-command-grader@v1
       with:
         test-name: Pregunta 06
-        setup-command: pip3 install 
+        setup-command: pip3 install pandas
         command: python3 tests.py 06
         timeout: 1
         max-score: 1
